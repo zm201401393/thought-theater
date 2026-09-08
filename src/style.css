@@ -1,0 +1,64 @@
+/* 思想实验剧场 - 暖纸色主题（book & tea）*/
+:root {
+  --bg: #f7f2e9;
+  --bg-soft: #efe8db;
+  --bg-card: #fffcf5;
+  --bg-hover: #f0e9dc;
+  --line: #e2d8c4;
+  --text: #3d3427;
+  --text-dim: #8a7d68;
+  --accent: #b0803a;       /* 暖金 */
+  --accent-soft: #d9c9a8;
+  --red: #b4543e;
+  --green: #5f7d55;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Serif SC", serif;
+  line-height: 1.7;
+}
+
+#app { min-height: 100vh; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: all .15s;
+}
+button:hover:not(:disabled) { background: var(--bg-hover); border-color: var(--accent-soft); }
+button:disabled { opacity: .4; cursor: not-allowed; }
+
+button.primary {
+  background: var(--accent);
+  color: #fffcf5;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+button.primary:hover:not(:disabled) { background: #c2914a; border-color: #c2914a; }
+
+input, textarea, select {
+  font-family: inherit;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent-soft); }
+textarea { resize: vertical; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
